@@ -1,3 +1,3 @@
 # Introduction
 
-# react-app
+# qiita-app
