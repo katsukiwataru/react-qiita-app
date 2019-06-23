@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './components/Button'
 
 class App extends Component {
   handleClick(event) {
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>Get Data</button>
+        <Button handleAdd={this.handleClick}/>
       </div>
     );
   }
