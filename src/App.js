@@ -21,20 +21,20 @@ class App extends Component {
         result: err
       })
     })
-    console.log(res);
     this.setState({
       state: true,
       result: res.data
     });
-    console.log(this.state);
-
+    console.log(res, res.data);
   }
 
   render() {
+    const result = this.state.state ? <div>{this.state.result.description}</div> : <div>Not Yet</div>;
     return (
       <div>
         <button onClick={this.handleClick}>Get Data</button>
         <Button handleAdd={this.handleClick}>Get Data</Button>
+        {result}
       </div>
     );
   }
