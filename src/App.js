@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Button from './components/Button'
 
-const server = 'https://qiita.com/api/v2/schema';
+const qiitaServer = 'https://qiita.com/api/v2/schema';
 
 class App extends Component {
   constructor() {
@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   async handleClick(event) {
-    const res = await axios.get(server).catch((err) => {
+    const res = await axios.get(qiitaServer).catch((err) => {
       this.setState({
         status: true,
         result: err
@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>Get Data</button>
-        <Button handleAdd={this.handleClick}>Get Data</Button>
+        <Button handleAdd={this.handleClick} test>Get Data</Button>
         {result}
       </div>
     );
